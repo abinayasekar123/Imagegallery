@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="gallery-container">
+    <h1>MY IMAGE GALLERY</h1>
+
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+      <button onclick="filterImages('all')">All</button>
+      <button onclick="filterImages('nature')">Nature</button>
+      <button onclick="filterImages('city')">City</button>
+      <button onclick="filterImages('animals')">Animals</button>
+       <button onclick="filterImages('flowers')">Flowers</button>
+      <button onclick="filterImages('ocean')">Ocean</button>
+      <button onclick="filterImages('birds')">Birds</button>
+      <button onclick="filterImages('heritage')">Heritage</button>
+    </div>
+
+    <!-- Image Grid -->
+    <div class="gallery-grid">
+      <div class="gallery-item nature">
+        <img src="images/nature1.jpg" alt="Nature 1" onclick="openLightbox(this)" />
+      </div>
+      <div class="gallery-item city">
+        <img src="images/city1.jpg" alt="City 1" onclick="openLightbox(this)" />
+      </div>
+      <div class="gallery-item animals">
+        <img src="images/animal1.jpg" alt="Animal 1" onclick="openLightbox(this)" />
+      </div>
+      <div class="gallery-item nature">
+        <img src="images/nature2.jpg" alt="Nature 2" onclick="openLightbox(this)" />
+      </div>
+      <div class="gallery-item city">
+        <img src="images/city2.jpg" alt="City 2" onclick="openLightbox(this)" />
+      </div>
+      <div class="gallery-item animals">
+        <img src="images/animal2.jpg" alt="Animal 2" onclick="openLightbox(this)" />
+      </div>
+       <div class="gallery-item flowers">
+        <img src="images/flowers1.jpg" alt="Flower 1" onclick="openLightbox(this)" />
+      </div>
+       <div class="gallery-item birds">
+        <img src="images/birds1.jpg" alt="Bird 1" onclick="openLightbox(this)" />
+      </div>
+       <div class="gallery-item flowers">
+        <img src="images/flowers2.jpg" alt="Flower 2" onclick="openLightbox(this)" />
+      </div>
+       <div class="gallery-item ocean">
+        <img src="images/ocean1.jpg" alt="Ocean 1" onclick="openLightbox(this)" />
+      </div>
+       <div class="gallery-item birds">
+        <img src="images/birds2.jpg" alt="Birds 2" onclick="openLightbox(this)" />
+      </div>
+       <div class="gallery-item ocean">
+        <img src="images/ocean2.jpg" alt="Ocean 2" onclick="openLightbox(this)" />
+      </div> <div class="gallery-item heritage">
+        <img src="images/heritage1.jpg" alt="Heritage 1" onclick="openLightbox(this)" />
+      </div>
+       <div class="gallery-item heritage">
+        <img src="images/heritage2.jpg" alt="Heritage 2" onclick="openLightbox(this)" />
+      </div>
+       <div class="gallery-item heritage">
+        <img src="images/heritage3.jpg" alt="Heritage 3" onclick="openLightbox(this)" />
+      </div>
+      <!-- Add more items similarly -->
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox">S
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" />
+    <button class="nav prev" onclick="changeImage(-1)">❮</button>
+    <button class="nav next" onclick="changeImage(1)">❯</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
